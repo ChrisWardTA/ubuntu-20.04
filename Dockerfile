@@ -20,6 +20,8 @@ ENV RUSTUP_HOME $RUST_HOME/.rustup
 
 # Set PATH to include custom bin directories
 ENV PATH $GOPATH/bin:$GOROOT/bin:$RUST_HOME/bin:$PATH
+ENV PATH /usr/lib/ccache:$PATH
+
 
 # KEEP PACKAGES SORTED ALPHABETICALY
 # Do everything in one RUN command
@@ -75,6 +77,7 @@ apt-get install -y --no-install-recommends \
   gstreamer1.0-plugins-good \
   gstreamer1.0-plugins-ugly \
   gstreamer1.0-tools \
+  ccache \
   libgstreamer1.0-dev \
   libglib2.0-dev \
   libgstreamer-plugins-bad1.0-dev \
